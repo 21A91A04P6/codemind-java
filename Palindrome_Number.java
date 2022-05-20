@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class palindrome
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int t,i;
+        t=sc.nextInt();
+        for(i=0;i<t;i++)
+        {
+            int n,r,sum=0,temp;
+            n=sc.nextInt();
+            temp=n;
+            while(n>0)
+            {
+                r=n%10;
+                sum=sum*10+r;
+                n=n/10;
+            }
+            if(sum==temp)
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
+    }
+}
